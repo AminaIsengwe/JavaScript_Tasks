@@ -23,12 +23,13 @@
             .then(response => response.json())
             .then(d => 
             d.forEach((element) =>{
-                newDiv.innerHTML += `id:${element.id} title:${element.title} <br>`
+                div1.innerHTML += `id:${element.id} title:${element.title} <br>`
                 
             }))
             .catch(err => console.log(err))
-
+            
 
     </script>
+
 </body>
 </html>
