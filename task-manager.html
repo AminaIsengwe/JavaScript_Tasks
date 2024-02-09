@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+</head>
+<body>
+    <h2>Task Manager</h2>
+    <form id="TaskForm">
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button type="button" onclick="addTask()">Add Task</button>
+    </form>
+    <ul id="taskList">
+    </ul>
+    <button onclick="removeCompletedTasks()">Remove Completed Tasks</button> 
+    <script> 
+        let tasks =[];
+        function addTask(){
+        const taskList= document.getElementById('taskList');
+        const taskInput = document.getElementById('taskInput');
+        tasks.push({name: taskInput.value, completed: false});
+        const data= tasks.map((task) => `<li> ${task.name}</li>`).join(" ")
+        taskList.innerHTML= data
+        console.log(tasks)
+        }
+    </script> 
+</body>
+</html>
