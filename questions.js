@@ -61,7 +61,7 @@ function startQuiz() {
 }
 
 // Questions data
-const questionsData = `[
+const questionsContents = `[
   {
     "text": "What is the capital of France?",
     "options": ["London", "Paris", "Berlin", "Rome"],
@@ -75,7 +75,7 @@ const questionsData = `[
 ]`;
 
 // Write questions data to JSON file
-fs.writeFileSync('questions.json', questionsData);
+fs.writeFileSync('questions.json', questionsContents);
 
 // Start the quiz when the script runs
 startQuiz();
